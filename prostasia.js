@@ -8,6 +8,8 @@
 // @include      https://*.grepolis.com/game/*
 // @grant        none
 // @icon         https://i.postimg.cc/kghr7w8N/protection.png
+// @downloadURL  https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
+// @updateURL    https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
 // ==/UserScript==
 
 function a0_0x5693(_0x345e13, _0xa9dcb) {
