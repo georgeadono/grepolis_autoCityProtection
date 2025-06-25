@@ -12,460 +12,331 @@
 // @updateURL    https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
 // ==/UserScript==
 
-function a0_0x5693(_0x345e13, _0xa9dcb) {
-  const _0x21276a = a0_0x2127();
-  return (
-    (a0_0x5693 = function (_0x56937f, _0x50248a) {
-      _0x56937f = _0x56937f - 0x6b;
-      let _0x51acda = _0x21276a[_0x56937f];
-      return _0x51acda;
-    }),
-    a0_0x5693(_0x345e13, _0xa9dcb)
-  );
-}
-function a0_0x2127() {
-  const _0x37029b = [
-    "8px",
-    "opacity",
-    "100659CtjPCM",
-    "3179184RSmrmF",
-    "display",
-    "number",
-    "gold",
-    "City:\x20",
-    "padStart",
-    "\x20@\x20",
-    "className",
-    "script",
-    "<img\x20src=\x22https://i.postimg.cc/kghr7w8N/protection.png\x22\x20alt=\x22Shield\x22\x20style=\x22width:20px;height:20px;vertical-align:middle;\x22>",
-    "fontSize",
-    "textContent",
-    "absolute",
-    "value",
-    "row",
-    "flex",
-    "right",
-    "#333",
-    "attributes",
-    "Error:\x20",
-    "gap",
-    "documentElement",
-    "Town",
-    "player_gods",
-    "clientY",
-    "No\x20Athena\x20city!",
-    "Cancelled",
-    "48bMGQQy",
-    "padding",
-    "body",
-    "9999",
-    "div",
-    "innerText",
-    "none",
-    "execute",
-    "6px",
-    "mousedown",
-    "34px",
-    "getHours",
-    "textShadow",
-    "backgroundColor",
-    "querySelector",
-    "marginTop",
-    "1px\x201px\x202px\x20#fff8dc",
-    "Protection\x20cast!",
-    "town_protection",
-    "left",
-    "4575015PCDSkm",
-    "7669zmHALK",
-    "ADD\x20SCHEDULE",
-    "titleDiv",
-    "placeholder",
-    "bottom",
-    "flexDirection",
-    "minWidth",
-    "Target\x20City\x20ID",
-    "max",
-    "title",
-    "getCollections",
-    "borderRadius",
-    "column",
-    "margin",
-    "#f5f5dc",
-    "clientX",
-    "type",
-    "color",
-    "bold",
-    "#f8de7e",
-    "5px",
-    "36kbDxDE",
-    "marginLeft",
-    "border",
-    "Please\x20enter\x20a\x20valid\x20city\x20ID,\x20hour\x20(0-23),\x20minute\x20(0-59),\x20and\x20second\x20(0-59).",
-    "models",
-    "Scheduled",
-    "center",
-    "style",
-    "3px",
-    "width",
-    "innerHTML",
-    "mousemove",
-    "span",
-    ".nui_main_menu\x20.bottom",
-    "796100EdSHig",
-    "getSeconds",
-    "offsetLeft",
-    "toString",
-    "marginBottom",
-    "ajaxPost",
-    "90px",
-    "addEventListener",
-    "startDiv",
-    "Cancel",
-    "zIndex",
-    "getMinutes",
-    "appendChild",
-    "append",
-    "athena",
-    "260px",
-    "0.6",
-    "click",
-    "csrfToken",
-    "Show/Hide\x20Athena\x20Protection\x20Scheduler",
-    "top",
-    "message",
-    "justifyContent",
-    "textAlign",
-    "button",
-    "10px",
-    "remove",
-    "input",
-    "18Ngzjip",
-    "push",
-    "950048UbHNfU",
-    "background",
-    "relative",
-    "124SoAPWe",
-    "pointer",
-    "2px\x208px",
-    "antiquewhite",
-    "min",
-    "createElement",
-    "alignItems",
-    "Athena\x20Protection\x20Scheduler",
-    "disabled",
-    "cursor",
-    "static",
-    "18px",
-    "712236DdgHcE",
-    "s...",
-    "position",
-    "Done!",
-  ];
-  a0_0x2127 = function () {
-    return _0x37029b;
-  };
-  return a0_0x2127();
-}
-(function (_0x3c50a0, _0x9d8322) {
-  const _0x98fd82 = a0_0x5693,
-    _0x5888c2 = _0x3c50a0();
-  while (!![]) {
-    try {
-      const _0x51ba12 =
-        (parseInt(_0x98fd82(0xbf)) / 0x1) * (-parseInt(_0x98fd82(0xaa)) / 0x2) +
-        (-parseInt(_0x98fd82(0x8e)) / 0x3) * (parseInt(_0x98fd82(0x7c)) / 0x4) +
-        parseInt(_0x98fd82(0xbe)) / 0x5 +
-        (-parseInt(_0x98fd82(0x77)) / 0x6) *
-          (-parseInt(_0x98fd82(0x88)) / 0x7) +
-        parseInt(_0x98fd82(0x8f)) / 0x8 +
-        (parseInt(_0x98fd82(0xd4)) / 0x9) * (parseInt(_0x98fd82(0xe2)) / 0xa) +
-        -parseInt(_0x98fd82(0x79)) / 0xb;
-      if (_0x51ba12 === _0x9d8322) break;
-      else _0x5888c2["push"](_0x5888c2["shift"]());
-    } catch (_0x166a29) {
-      _0x5888c2["push"](_0x5888c2["shift"]());
+// Obfuscate the script before deploying
+//javascript-obfuscator prostasia.js --output prostasia.obf.js
+
+(function (pageScript) {
+  var script = document.createElement("script");
+  script.textContent = "(" + pageScript.toString() + ")();";
+  document.documentElement.appendChild(script);
+})(function () {
+  // --- UI Setup ---
+  const bod2 = document.body;
+
+  const startDiv = document.createElement("div");
+  startDiv.className = "startDiv";
+  startDiv.style.top = "560px";
+  startDiv.style.left = "20px";
+  startDiv.style.position = "absolute";
+  startDiv.style.zIndex = "9999";
+  startDiv.style.backgroundColor = "white";
+  startDiv.style.border = "1px solid black";
+  startDiv.style.textAlign = "center";
+  startDiv.style.padding = "0";
+  startDiv.style.minWidth = "260px";
+
+  const titleDiv = document.createElement("div");
+  titleDiv.className = "titleDiv";
+  titleDiv.style.padding = "10px";
+  titleDiv.style.cursor = "move";
+  titleDiv.style.zIndex = "10";
+  titleDiv.style.backgroundColor = "#f8de7e";
+  titleDiv.style.color = "#333";
+  titleDiv.style.fontWeight = "bold";
+  titleDiv.style.textShadow = "1px 1px 2px #fff8dc";
+  titleDiv.innerText = "Athena Protection Scheduler";
+
+  const containerDiv = document.createElement("div");
+  containerDiv.style.backgroundColor = "antiquewhite";
+  containerDiv.style.display = "flex";
+  containerDiv.style.flexDirection = "column";
+  containerDiv.style.padding = "10px";
+
+  // City ID input
+  const townInput = document.createElement("input");
+  townInput.type = "number";
+  townInput.min = "0";
+  townInput.placeholder = "Target City ID";
+  townInput.style.marginBottom = "5px";
+  townInput.style.width = "90px";
+
+  // --- Time Inputs Row ---
+  const spellHourInput = document.createElement("input");
+  const spellMinuteInput = document.createElement("input");
+  const spellSecondInput = document.createElement("input");
+  const timeRow = document.createElement("div");
+  timeRow.style.display = "flex";
+  timeRow.style.flexDirection = "row";
+  timeRow.style.gap = "3px";
+  timeRow.style.justifyContent = "center";
+  timeRow.style.marginBottom = "5px";
+
+  // Hour input
+  spellHourInput.type = "number";
+  spellHourInput.min = "0";
+  spellHourInput.max = "23";
+  spellHourInput.placeholder = "HH";
+  spellHourInput.style.width = "34px";
+  spellHourInput.style.textAlign = "center";
+  spellHourInput.style.marginBottom = "0";
+
+  // Minute input
+  spellMinuteInput.type = "number";
+  spellMinuteInput.min = "0";
+  spellMinuteInput.max = "59";
+  spellMinuteInput.placeholder = "MM";
+  spellMinuteInput.style.width = "34px";
+  spellMinuteInput.style.textAlign = "center";
+  spellMinuteInput.style.marginBottom = "0";
+
+  // Second input
+  spellSecondInput.type = "number";
+  spellSecondInput.min = "0";
+  spellSecondInput.max = "59";
+  spellSecondInput.placeholder = "SS";
+  spellSecondInput.style.width = "34px";
+  spellSecondInput.style.textAlign = "center";
+  spellSecondInput.style.marginBottom = "0";
+
+  // Add time inputs to row
+  timeRow.appendChild(spellHourInput);
+  timeRow.appendChild(spellMinuteInput);
+  timeRow.appendChild(spellSecondInput);
+
+  // Schedule button
+  const spellButton = document.createElement("button");
+  spellButton.innerText = "ADD SCHEDULE";
+  spellButton.style.marginBottom = "5px";
+
+  // Schedules list
+  const schedulesDiv = document.createElement("div");
+  schedulesDiv.style.display = "flex";
+  schedulesDiv.style.flexDirection = "column";
+  schedulesDiv.style.gap = "6px";
+  schedulesDiv.style.marginTop = "10px";
+
+  // Add elements to container
+  containerDiv.appendChild(townInput);
+  containerDiv.appendChild(timeRow);
+  containerDiv.appendChild(spellButton);
+  containerDiv.appendChild(schedulesDiv);
+
+  startDiv.appendChild(titleDiv);
+  startDiv.appendChild(containerDiv);
+  bod2.append(startDiv);
+
+  // --- Add toggle button to .nui_main_menu .bottom ---
+  const toggleBtn = document.createElement("button");
+  toggleBtn.innerHTML =
+    '<img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/assets/protection.png" alt="Shield" style="width:20px;height:20px;vertical-align:middle;">';
+  toggleBtn.title = "Show/Hide Athena Protection Scheduler";
+  toggleBtn.style.zIndex = "10000";
+  toggleBtn.style.fontSize = "18px";
+  toggleBtn.style.background = "gold";
+  toggleBtn.style.border = "1px solid #bfa100";
+  toggleBtn.style.borderRadius = "6px";
+  toggleBtn.style.cursor = "pointer";
+  toggleBtn.style.margin = "4px";
+  toggleBtn.style.position = "absolute";
+  toggleBtn.style.right = "8px";
+  toggleBtn.style.bottom = "8px";
+
+  // Place the button in the .nui_main_menu .bottom div
+  const mainMenuBottom = document.querySelector(".nui_main_menu .bottom");
+  if (mainMenuBottom) {
+    // Only set position: relative if not already set, to avoid layout issues
+    if (getComputedStyle(mainMenuBottom).position === "static") {
+      mainMenuBottom.style.position = "relative";
     }
+    mainMenuBottom.appendChild(toggleBtn);
   }
-})(a0_0x2127, 0x98b6e),
-  (function (_0x4d45f2) {
-    const _0x1b42ce = a0_0x5693;
-    var _0x124b89 = document[_0x1b42ce(0x81)](_0x1b42ce(0x97));
-    (_0x124b89[_0x1b42ce(0x9a)] = "(" + _0x4d45f2[_0x1b42ce(0xe5)]() + ")();"),
-      document[_0x1b42ce(0xa4)][_0x1b42ce(0xee)](_0x124b89);
-  })(function () {
-    const _0x135e6a = a0_0x5693,
-      _0x33d4ee = document[_0x135e6a(0xac)],
-      _0x44d74b = document[_0x135e6a(0x81)](_0x135e6a(0xae));
-    (_0x44d74b[_0x135e6a(0x96)] = _0x135e6a(0xea)),
-      (_0x44d74b["style"][_0x135e6a(0x6f)] = "560px"),
-      (_0x44d74b[_0x135e6a(0xdb)]["left"] = "20px"),
-      (_0x44d74b["style"]["position"] = "absolute"),
-      (_0x44d74b[_0x135e6a(0xdb)][_0x135e6a(0xec)] = _0x135e6a(0xad)),
-      (_0x44d74b[_0x135e6a(0xdb)][_0x135e6a(0xb7)] = "white"),
-      (_0x44d74b[_0x135e6a(0xdb)][_0x135e6a(0xd6)] = "1px\x20solid\x20black"),
-      (_0x44d74b[_0x135e6a(0xdb)]["textAlign"] = _0x135e6a(0xda)),
-      (_0x44d74b[_0x135e6a(0xdb)]["padding"] = "0"),
-      (_0x44d74b[_0x135e6a(0xdb)][_0x135e6a(0xc5)] = _0x135e6a(0xf1));
-    const _0x57be33 = document[_0x135e6a(0x81)](_0x135e6a(0xae));
-    (_0x57be33[_0x135e6a(0x96)] = _0x135e6a(0xc1)),
-      (_0x57be33["style"][_0x135e6a(0xab)] = _0x135e6a(0x74)),
-      (_0x57be33[_0x135e6a(0xdb)][_0x135e6a(0x85)] = "move"),
-      (_0x57be33[_0x135e6a(0xdb)][_0x135e6a(0xec)] = "10"),
-      (_0x57be33["style"][_0x135e6a(0xb7)] = _0x135e6a(0xd2)),
-      (_0x57be33[_0x135e6a(0xdb)][_0x135e6a(0xd0)] = _0x135e6a(0xa0)),
-      (_0x57be33[_0x135e6a(0xdb)]["fontWeight"] = _0x135e6a(0xd1)),
-      (_0x57be33["style"][_0x135e6a(0xb6)] = _0x135e6a(0xba)),
-      (_0x57be33[_0x135e6a(0xaf)] = _0x135e6a(0x83));
-    const _0x7d8b89 = document[_0x135e6a(0x81)]("div");
-    (_0x7d8b89["style"]["backgroundColor"] = _0x135e6a(0x7f)),
-      (_0x7d8b89[_0x135e6a(0xdb)]["display"] = _0x135e6a(0x9e)),
-      (_0x7d8b89[_0x135e6a(0xdb)][_0x135e6a(0xc4)] = _0x135e6a(0xcb)),
-      (_0x7d8b89["style"][_0x135e6a(0xab)] = _0x135e6a(0x74));
-    const _0x274932 = document[_0x135e6a(0x81)](_0x135e6a(0x76));
-    (_0x274932[_0x135e6a(0xcf)] = _0x135e6a(0x91)),
-      (_0x274932[_0x135e6a(0x80)] = "0"),
-      (_0x274932[_0x135e6a(0xc2)] = _0x135e6a(0xc6)),
-      (_0x274932[_0x135e6a(0xdb)]["marginBottom"] = _0x135e6a(0xd3)),
-      (_0x274932[_0x135e6a(0xdb)][_0x135e6a(0xdd)] = _0x135e6a(0xe8));
-    const _0x4c5e5f = document[_0x135e6a(0x81)]("input"),
-      _0x1e8746 = document["createElement"]("input"),
-      _0x36a7a0 = document["createElement"](_0x135e6a(0x76)),
-      _0x462d9c = document[_0x135e6a(0x81)](_0x135e6a(0xae));
-    (_0x462d9c["style"][_0x135e6a(0x90)] = _0x135e6a(0x9e)),
-      (_0x462d9c[_0x135e6a(0xdb)][_0x135e6a(0xc4)] = _0x135e6a(0x9d)),
-      (_0x462d9c[_0x135e6a(0xdb)][_0x135e6a(0xa3)] = _0x135e6a(0xdc)),
-      (_0x462d9c[_0x135e6a(0xdb)][_0x135e6a(0x71)] = _0x135e6a(0xda)),
-      (_0x462d9c[_0x135e6a(0xdb)][_0x135e6a(0xe6)] = _0x135e6a(0xd3)),
-      (_0x4c5e5f[_0x135e6a(0xcf)] = _0x135e6a(0x91)),
-      (_0x4c5e5f[_0x135e6a(0x80)] = "0"),
-      (_0x4c5e5f[_0x135e6a(0xc7)] = "23"),
-      (_0x4c5e5f[_0x135e6a(0xc2)] = "HH"),
-      (_0x4c5e5f["style"][_0x135e6a(0xdd)] = _0x135e6a(0xb4)),
-      (_0x4c5e5f["style"]["textAlign"] = "center"),
-      (_0x4c5e5f["style"]["marginBottom"] = "0"),
-      (_0x1e8746[_0x135e6a(0xcf)] = _0x135e6a(0x91)),
-      (_0x1e8746[_0x135e6a(0x80)] = "0"),
-      (_0x1e8746[_0x135e6a(0xc7)] = "59"),
-      (_0x1e8746[_0x135e6a(0xc2)] = "MM"),
-      (_0x1e8746[_0x135e6a(0xdb)]["width"] = _0x135e6a(0xb4)),
-      (_0x1e8746[_0x135e6a(0xdb)][_0x135e6a(0x72)] = "center"),
-      (_0x1e8746[_0x135e6a(0xdb)][_0x135e6a(0xe6)] = "0"),
-      (_0x36a7a0[_0x135e6a(0xcf)] = _0x135e6a(0x91)),
-      (_0x36a7a0[_0x135e6a(0x80)] = "0"),
-      (_0x36a7a0[_0x135e6a(0xc7)] = "59"),
-      (_0x36a7a0[_0x135e6a(0xc2)] = "SS"),
-      (_0x36a7a0[_0x135e6a(0xdb)][_0x135e6a(0xdd)] = _0x135e6a(0xb4)),
-      (_0x36a7a0[_0x135e6a(0xdb)][_0x135e6a(0x72)] = _0x135e6a(0xda)),
-      (_0x36a7a0[_0x135e6a(0xdb)][_0x135e6a(0xe6)] = "0"),
-      _0x462d9c["appendChild"](_0x4c5e5f),
-      _0x462d9c[_0x135e6a(0xee)](_0x1e8746),
-      _0x462d9c[_0x135e6a(0xee)](_0x36a7a0);
-    const _0x5280de = document[_0x135e6a(0x81)](_0x135e6a(0x73));
-    (_0x5280de[_0x135e6a(0xaf)] = _0x135e6a(0xc0)),
-      (_0x5280de[_0x135e6a(0xdb)][_0x135e6a(0xe6)] = _0x135e6a(0xd3));
-    const _0x5cc542 = document["createElement"](_0x135e6a(0xae));
-    (_0x5cc542[_0x135e6a(0xdb)]["display"] = "flex"),
-      (_0x5cc542[_0x135e6a(0xdb)]["flexDirection"] = _0x135e6a(0xcb)),
-      (_0x5cc542[_0x135e6a(0xdb)]["gap"] = _0x135e6a(0xb2)),
-      (_0x5cc542["style"][_0x135e6a(0xb9)] = _0x135e6a(0x74)),
-      _0x7d8b89[_0x135e6a(0xee)](_0x274932),
-      _0x7d8b89["appendChild"](_0x462d9c),
-      _0x7d8b89[_0x135e6a(0xee)](_0x5280de),
-      _0x7d8b89[_0x135e6a(0xee)](_0x5cc542),
-      _0x44d74b[_0x135e6a(0xee)](_0x57be33),
-      _0x44d74b[_0x135e6a(0xee)](_0x7d8b89),
-      _0x33d4ee[_0x135e6a(0xef)](_0x44d74b);
-    const _0x1be24b = document[_0x135e6a(0x81)](_0x135e6a(0x73));
-    (_0x1be24b[_0x135e6a(0xde)] = _0x135e6a(0x98)),
-      (_0x1be24b[_0x135e6a(0xc8)] = _0x135e6a(0x6e)),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0xec)] = "10000"),
-      (_0x1be24b["style"][_0x135e6a(0x99)] = _0x135e6a(0x87)),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0x7a)] = _0x135e6a(0x92)),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0xd6)] = "1px\x20solid\x20#bfa100"),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0xca)] = _0x135e6a(0xb2)),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0x85)] = _0x135e6a(0x7d)),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0xcc)] = "4px"),
-      (_0x1be24b[_0x135e6a(0xdb)][_0x135e6a(0x8a)] = _0x135e6a(0x9b)),
-      (_0x1be24b["style"][_0x135e6a(0x9f)] = _0x135e6a(0x8c)),
-      (_0x1be24b["style"][_0x135e6a(0xc3)] = _0x135e6a(0x8c));
-    const _0x41634d = document[_0x135e6a(0xb8)](_0x135e6a(0xe1));
-    _0x41634d &&
-      (getComputedStyle(_0x41634d)["position"] === _0x135e6a(0x86) &&
-        (_0x41634d[_0x135e6a(0xdb)][_0x135e6a(0x8a)] = _0x135e6a(0x7b)),
-      _0x41634d[_0x135e6a(0xee)](_0x1be24b));
-    (_0x44d74b[_0x135e6a(0xdb)]["display"] = _0x135e6a(0xb0)),
-      _0x1be24b[_0x135e6a(0xe9)](_0x135e6a(0x6c), function () {
-        const _0x5316aa = _0x135e6a;
-        _0x44d74b[_0x5316aa(0xdb)][_0x5316aa(0x90)] =
-          _0x44d74b[_0x5316aa(0xdb)][_0x5316aa(0x90)] === _0x5316aa(0xb0)
-            ? ""
-            : "none";
-      });
-    let _0x2d73bf = _0x57be33,
-      _0x2ce894 = _0x44d74b,
-      _0x55f0da = 0x0,
-      _0x268ec4 = 0x0,
-      _0x19b93b = ![];
-    _0x2d73bf[_0x135e6a(0xe9)](
-      _0x135e6a(0xb3),
-      function (_0x1241d6) {
-        const _0x3c682f = _0x135e6a;
-        (_0x19b93b = !![]),
-          (_0x55f0da = _0x2ce894[_0x3c682f(0xe4)] - _0x1241d6[_0x3c682f(0xce)]),
-          (_0x268ec4 = _0x2ce894["offsetTop"] - _0x1241d6[_0x3c682f(0xa7)]),
-          _0x1241d6["preventDefault"]();
-      },
-      !![]
-    ),
-      document["addEventListener"](
-        "mouseup",
-        function () {
-          _0x19b93b = ![];
-        },
-        !![]
-      ),
-      _0x2d73bf[_0x135e6a(0xe9)](
-        _0x135e6a(0xdf),
-        function (_0x46f662) {
-          const _0x5203c7 = _0x135e6a;
-          _0x19b93b &&
-            ((_0x2ce894[_0x5203c7(0xdb)][_0x5203c7(0xbd)] =
-              _0x46f662["clientX"] + _0x55f0da + "px"),
-            (_0x2ce894[_0x5203c7(0xdb)]["top"] =
-              _0x46f662[_0x5203c7(0xa7)] + _0x268ec4 + "px"));
-        },
-        !![]
+
+  // Hide the scheduler window by default
+  startDiv.style.display = "none";
+
+  // Toggle window on button click
+  toggleBtn.addEventListener("click", function () {
+    startDiv.style.display = startDiv.style.display === "none" ? "" : "none";
+  });
+
+  // --- Window Movement ---
+  let elem = titleDiv,
+    par = startDiv,
+    x = 0,
+    y = 0,
+    mousedown = false;
+
+  elem.addEventListener(
+    "mousedown",
+    function (e) {
+      mousedown = true;
+      x = par.offsetLeft - e.clientX;
+      y = par.offsetTop - e.clientY;
+      e.preventDefault();
+    },
+    true
+  );
+
+  document.addEventListener(
+    "mouseup",
+    function () {
+      mousedown = false;
+    },
+    true
+  );
+
+  elem.addEventListener(
+    "mousemove",
+    function (e) {
+      if (mousedown) {
+        par.style.left = e.clientX + x + "px";
+        par.style.top = e.clientY + y + "px";
+      }
+    },
+    true
+  );
+
+  // --- Multiple Schedules Logic ---
+  let scheduleList = [];
+
+  spellButton.addEventListener("click", function () {
+    const targetTownId = parseInt(townInput.value, 10);
+    const hour = parseInt(spellHourInput.value, 10);
+    const minute = parseInt(spellMinuteInput.value, 10);
+    const second = parseInt(spellSecondInput.value, 10);
+
+    if (
+      !targetTownId ||
+      isNaN(hour) ||
+      hour < 0 ||
+      hour > 23 ||
+      isNaN(minute) ||
+      minute < 0 ||
+      minute > 59 ||
+      isNaN(second) ||
+      second < 0 ||
+      second > 59
+    ) {
+      alert(
+        "Please enter a valid city ID, hour (0-23), minute (0-59), and second (0-59)."
       );
-    let _0x509f2c = [];
-    _0x5280de["addEventListener"](_0x135e6a(0x6c), function () {
-      const _0x262c82 = _0x135e6a,
-        _0x18a9e7 = parseInt(_0x274932[_0x262c82(0x9c)], 0xa),
-        _0x5a6e33 = parseInt(_0x4c5e5f[_0x262c82(0x9c)], 0xa),
-        _0x440881 = parseInt(_0x1e8746[_0x262c82(0x9c)], 0xa),
-        _0x3ca14d = parseInt(_0x36a7a0[_0x262c82(0x9c)], 0xa);
+      return;
+    }
+
+    addSchedule(targetTownId, hour, minute, second);
+  });
+
+  function addSchedule(targetTownId, hour, minute, second) {
+    // UI row for this schedule
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    row.style.flexDirection = "row";
+    row.style.alignItems = "center";
+    row.style.gap = "8px";
+    row.style.background = "#f5f5dc";
+    row.style.border = "1px solid #ccc";
+    row.style.padding = "3px 5px";
+    row.style.fontSize = "13px";
+
+    const info = document.createElement("span");
+    info.innerText = `City: ${targetTownId} @ ${hour
+      .toString()
+      .padStart(2, "0")}:${minute.toString().padStart(2, "0")}:${second
+      .toString()
+      .padStart(2, "0")}`;
+
+    const status = document.createElement("span");
+    status.innerText = "Scheduled";
+    status.style.marginLeft = "6px";
+    status.style.color = "#333";
+
+    const cancelBtn = document.createElement("button");
+    cancelBtn.innerText = "Cancel";
+    cancelBtn.style.backgroundColor = "#e57373";
+    cancelBtn.style.color = "#fff";
+    cancelBtn.style.border = "none";
+    cancelBtn.style.cursor = "pointer";
+    cancelBtn.style.padding = "2px 8px";
+    cancelBtn.style.fontSize = "12px";
+    cancelBtn.style.marginLeft = "6px";
+
+    row.appendChild(info);
+    row.appendChild(status);
+    row.appendChild(cancelBtn);
+    schedulesDiv.appendChild(row);
+
+    // Schedule logic
+    let intervalId = setInterval(async function () {
+      const now = new Date();
       if (
-        !_0x18a9e7 ||
-        isNaN(_0x5a6e33) ||
-        _0x5a6e33 < 0x0 ||
-        _0x5a6e33 > 0x17 ||
-        isNaN(_0x440881) ||
-        _0x440881 < 0x0 ||
-        _0x440881 > 0x3b ||
-        isNaN(_0x3ca14d) ||
-        _0x3ca14d < 0x0 ||
-        _0x3ca14d > 0x3b
+        now.getHours() === hour &&
+        now.getMinutes() === minute &&
+        now.getSeconds() >= second - 3 &&
+        now.getSeconds() <= second + 2
       ) {
-        alert(_0x262c82(0xd7));
+        status.innerText = `Spamming at ${now.getSeconds()}s...`;
+        await castProtection(targetTownId, status);
+      }
+      if (
+        now.getHours() === hour &&
+        now.getMinutes() === minute &&
+        now.getSeconds() > second + 2
+      ) {
+        status.innerText = "Done!";
+        clearInterval(intervalId);
+      }
+    }, 200);
+
+    cancelBtn.addEventListener("click", function () {
+      clearInterval(intervalId);
+      status.innerText = "Cancelled";
+      cancelBtn.disabled = true;
+      row.style.opacity = "0.6";
+      row.remove();
+    });
+
+    // Keep reference if you want to manage schedules later
+    scheduleList.push({ intervalId, row });
+  }
+
+  async function castProtection(targetTownId, statusElem) {
+    try {
+      // Find a city with Athena
+      const myTowns = uw.MM.getCollections().Town[0].models;
+      let athenaTown = null;
+      for (let t of myTowns) {
+        if (t.attributes.god === "athena") {
+          athenaTown = t;
+          break;
+        }
+      }
+      if (!athenaTown) {
+        statusElem.innerText = "No Athena city!";
         return;
       }
-      _0x10298f(_0x18a9e7, _0x5a6e33, _0x440881, _0x3ca14d);
-    });
-    function _0x10298f(_0x7253c1, _0x510fbf, _0x3ebb1f, _0x57d265) {
-      const _0x1c782e = _0x135e6a,
-        _0x5084e7 = document["createElement"]("div");
-      (_0x5084e7[_0x1c782e(0xdb)]["display"] = _0x1c782e(0x9e)),
-        (_0x5084e7[_0x1c782e(0xdb)]["flexDirection"] = _0x1c782e(0x9d)),
-        (_0x5084e7["style"][_0x1c782e(0x82)] = _0x1c782e(0xda)),
-        (_0x5084e7[_0x1c782e(0xdb)]["gap"] = _0x1c782e(0x8c)),
-        (_0x5084e7[_0x1c782e(0xdb)][_0x1c782e(0x7a)] = _0x1c782e(0xcd)),
-        (_0x5084e7[_0x1c782e(0xdb)]["border"] = "1px\x20solid\x20#ccc"),
-        (_0x5084e7[_0x1c782e(0xdb)]["padding"] = "3px\x205px"),
-        (_0x5084e7[_0x1c782e(0xdb)]["fontSize"] = "13px");
-      const _0x675862 = document[_0x1c782e(0x81)](_0x1c782e(0xe0));
-      _0x675862[_0x1c782e(0xaf)] =
-        _0x1c782e(0x93) +
-        _0x7253c1 +
-        _0x1c782e(0x95) +
-        _0x510fbf[_0x1c782e(0xe5)]()[_0x1c782e(0x94)](0x2, "0") +
-        ":" +
-        _0x3ebb1f[_0x1c782e(0xe5)]()[_0x1c782e(0x94)](0x2, "0") +
-        ":" +
-        _0x57d265["toString"]()[_0x1c782e(0x94)](0x2, "0");
-      const _0xd31b28 = document["createElement"](_0x1c782e(0xe0));
-      (_0xd31b28["innerText"] = _0x1c782e(0xd9)),
-        (_0xd31b28["style"][_0x1c782e(0xd5)] = "6px"),
-        (_0xd31b28[_0x1c782e(0xdb)]["color"] = _0x1c782e(0xa0));
-      const _0x244e97 = document[_0x1c782e(0x81)](_0x1c782e(0x73));
-      (_0x244e97["innerText"] = _0x1c782e(0xeb)),
-        (_0x244e97[_0x1c782e(0xdb)][_0x1c782e(0xb7)] = "#e57373"),
-        (_0x244e97[_0x1c782e(0xdb)]["color"] = "#fff"),
-        (_0x244e97[_0x1c782e(0xdb)][_0x1c782e(0xd6)] = _0x1c782e(0xb0)),
-        (_0x244e97[_0x1c782e(0xdb)][_0x1c782e(0x85)] = _0x1c782e(0x7d)),
-        (_0x244e97["style"][_0x1c782e(0xab)] = _0x1c782e(0x7e)),
-        (_0x244e97["style"]["fontSize"] = "12px"),
-        (_0x244e97["style"][_0x1c782e(0xd5)] = "6px"),
-        _0x5084e7[_0x1c782e(0xee)](_0x675862),
-        _0x5084e7["appendChild"](_0xd31b28),
-        _0x5084e7[_0x1c782e(0xee)](_0x244e97),
-        _0x5cc542[_0x1c782e(0xee)](_0x5084e7);
-      let _0x327a6f = setInterval(async function () {
-        const _0x53abe0 = _0x1c782e,
-          _0x3aa2aa = new Date();
-        _0x3aa2aa[_0x53abe0(0xb5)]() === _0x510fbf &&
-          _0x3aa2aa[_0x53abe0(0xed)]() === _0x3ebb1f &&
-          _0x3aa2aa[_0x53abe0(0xe3)]() >= _0x57d265 - 0x3 &&
-          _0x3aa2aa[_0x53abe0(0xe3)]() <= _0x57d265 + 0x2 &&
-          ((_0xd31b28[_0x53abe0(0xaf)] =
-            "Spamming\x20at\x20" +
-            _0x3aa2aa[_0x53abe0(0xe3)]() +
-            _0x53abe0(0x89)),
-          await _0xaf4a86(_0x7253c1, _0xd31b28)),
-          _0x3aa2aa[_0x53abe0(0xb5)]() === _0x510fbf &&
-            _0x3aa2aa[_0x53abe0(0xed)]() === _0x3ebb1f &&
-            _0x3aa2aa["getSeconds"]() > _0x57d265 + 0x2 &&
-            ((_0xd31b28[_0x53abe0(0xaf)] = _0x53abe0(0x8b)),
-            clearInterval(_0x327a6f));
-      }, 0xc8);
-      _0x244e97["addEventListener"](_0x1c782e(0x6c), function () {
-        const _0x4e7476 = _0x1c782e;
-        clearInterval(_0x327a6f),
-          (_0xd31b28[_0x4e7476(0xaf)] = _0x4e7476(0xa9)),
-          (_0x244e97[_0x4e7476(0x84)] = !![]),
-          (_0x5084e7["style"][_0x4e7476(0x8d)] = _0x4e7476(0x6b)),
-          _0x5084e7[_0x4e7476(0x75)]();
-      }),
-        _0x509f2c[_0x1c782e(0x78)]({ intervalId: _0x327a6f, row: _0x5084e7 });
-    }
-    async function _0xaf4a86(_0x234e30, _0x1e2640) {
-      const _0x2a7377 = _0x135e6a;
-      try {
-        const _0x41256f =
-          uw["MM"][_0x2a7377(0xc9)]()[_0x2a7377(0xa5)][0x0][_0x2a7377(0xd8)];
-        let _0x5ef726 = null;
-        for (let _0x4c5516 of _0x41256f) {
-          if (_0x4c5516[_0x2a7377(0xa1)]["god"] === _0x2a7377(0xf0)) {
-            _0x5ef726 = _0x4c5516;
-            break;
-          }
-        }
-        if (!_0x5ef726) {
-          _0x1e2640[_0x2a7377(0xaf)] = _0x2a7377(0xa8);
-          return;
-        }
-        let _0x5114be = ITowns[_0x2a7377(0xa6)]["attributes"]["athena_favor"];
-        if (_0x5114be < 0x82) {
-          _0x1e2640["innerText"] = "Not\x20enough\x20favor!";
-          return;
-        }
-        let _0x7bc381 = {
-          model_url: "CastedPowers",
-          action_name: "cast",
-          arguments: {
-            power_id: _0x2a7377(0xbc),
-            target_id: _0x234e30,
-            town_id: _0x5ef726[_0x2a7377(0xa1)]["id"],
-            csrfToken: Game[_0x2a7377(0x6d)],
-          },
-        };
-        gpAjax[_0x2a7377(0xe7)](
-          "frontend_bridge",
-          _0x2a7377(0xb1),
-          _0x7bc381,
-          !![]
-        ),
-          (_0x1e2640[_0x2a7377(0xaf)] = _0x2a7377(0xbb));
-      } catch (_0x4232da) {
-        _0x1e2640["innerText"] = _0x2a7377(0xa2) + _0x4232da[_0x2a7377(0x70)];
+
+      // Check favor (optional)
+      let favor = ITowns.player_gods.attributes.athena_favor;
+      if (favor < 130) {
+        statusElem.innerText = "Not enough favor!";
+        return;
       }
+
+      let data = {
+        model_url: "CastedPowers",
+        action_name: "cast",
+        arguments: {
+          power_id: "town_protection",
+          target_id: targetTownId,
+          town_id: athenaTown.attributes.id,
+          csrfToken: Game.csrfToken,
+        },
+      };
+
+      gpAjax.ajaxPost("frontend_bridge", "execute", data, true);
+      statusElem.innerText = "Protection cast!";
+    } catch (e) {
+      statusElem.innerText = "Error: " + e.message;
     }
-  })();
+  }
+})();
