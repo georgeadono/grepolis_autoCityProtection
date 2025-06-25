@@ -7,7 +7,7 @@
 // @include      http://*.grepolis.com/game/*
 // @include      https://*.grepolis.com/game/*
 // @grant        none
-// @icon         https://i.postimg.cc/kghr7w8N/protection.png
+// @icon         https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/main/protection.png
 // @downloadURL  https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
 // @updateURL    https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
 // ==/UserScript==
