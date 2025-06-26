@@ -12,6 +12,331 @@
 // @updateURL    https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/refs/heads/main/prostasia.js
 // ==/UserScript==
 
+// Obfuscate the script before deploying
+//javascript-obfuscator prostasia.js --output prostasia.obf.js
 
+(function (pageScript) {
+  var script = document.createElement("script");
+  script.textContent = "(" + pageScript.toString() + ")();";
+  document.documentElement.appendChild(script);
+})(function () {
+  // --- UI Setup ---
+  const bod2 = document.body;
 
-(function(_0x11f0b1,_0x1125f6){const _0x10472f=a0_0x2e08,_0x25b15c=_0x11f0b1();while(!![]){try{const _0x4f4ef0=-parseInt(_0x10472f(0xaf))/0x1+parseInt(_0x10472f(0xd6))/0x2*(parseInt(_0x10472f(0xfd))/0x3)+parseInt(_0x10472f(0xfe))/0x4*(-parseInt(_0x10472f(0xc8))/0x5)+-parseInt(_0x10472f(0xac))/0x6*(-parseInt(_0x10472f(0x85))/0x7)+-parseInt(_0x10472f(0xe6))/0x8+parseInt(_0x10472f(0xed))/0x9*(-parseInt(_0x10472f(0xbf))/0xa)+parseInt(_0x10472f(0xa0))/0xb*(parseInt(_0x10472f(0x9a))/0xc);if(_0x4f4ef0===_0x1125f6)break;else _0x25b15c['push'](_0x25b15c['shift']());}catch(_0x215581){_0x25b15c['push'](_0x25b15c['shift']());}}}(a0_0xea08,0x7f60b),function(_0x3f22a7){const _0x36378d=a0_0x2e08;var _0x6d6961=document[_0x36378d(0xe7)](_0x36378d(0xe3));_0x6d6961[_0x36378d(0xa2)]='('+_0x3f22a7[_0x36378d(0xba)]()+_0x36378d(0xd1),document[_0x36378d(0x88)]['appendChild'](_0x6d6961);}(function(){const _0xcabb2=a0_0x2e08,_0xee8825=document['body'],_0xd10dbb=document['createElement'](_0xcabb2(0xda));_0xd10dbb['className']=_0xcabb2(0xd9),_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0x9b)]=_0xcabb2(0xa9),_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0xb0)]=_0xcabb2(0xab),_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0x94)]=_0xcabb2(0x8a),_0xd10dbb['style'][_0xcabb2(0x89)]=_0xcabb2(0xfc),_0xd10dbb['style']['backgroundColor']='white',_0xd10dbb['style'][_0xcabb2(0xcb)]='1px\x20solid\x20black',_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0x80)]='center',_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0xf4)]='0',_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0xf1)]=_0xcabb2(0xfb);const _0x4271a7=document[_0xcabb2(0xe7)](_0xcabb2(0xda));_0x4271a7[_0xcabb2(0xb3)]='titleDiv',_0x4271a7[_0xcabb2(0x9e)]['padding']=_0xcabb2(0xef),_0x4271a7['style'][_0xcabb2(0xce)]=_0xcabb2(0xa7),_0x4271a7['style'][_0xcabb2(0x89)]='10',_0x4271a7[_0xcabb2(0x9e)][_0xcabb2(0xdb)]=_0xcabb2(0xbb),_0x4271a7['style'][_0xcabb2(0x8d)]=_0xcabb2(0xa4),_0x4271a7[_0xcabb2(0x9e)]['fontWeight']='bold',_0x4271a7[_0xcabb2(0x9e)][_0xcabb2(0xbc)]=_0xcabb2(0x97),_0x4271a7[_0xcabb2(0x103)]=_0xcabb2(0x92);const _0x40565e=document['createElement'](_0xcabb2(0xda));_0x40565e[_0xcabb2(0x9e)]['backgroundColor']=_0xcabb2(0xe2),_0x40565e[_0xcabb2(0x9e)][_0xcabb2(0x99)]=_0xcabb2(0x96),_0x40565e[_0xcabb2(0x9e)][_0xcabb2(0xe1)]='column',_0x40565e[_0xcabb2(0x9e)][_0xcabb2(0xf4)]='10px';const _0x2e92bc=document[_0xcabb2(0xe7)](_0xcabb2(0x104));_0x2e92bc[_0xcabb2(0xb6)]=_0xcabb2(0x9f),_0x2e92bc[_0xcabb2(0xbd)]='0',_0x2e92bc[_0xcabb2(0xc5)]=_0xcabb2(0xc7),_0x2e92bc[_0xcabb2(0x9e)][_0xcabb2(0xee)]=_0xcabb2(0xdc),_0x2e92bc[_0xcabb2(0x9e)][_0xcabb2(0xf6)]=_0xcabb2(0x91);const _0x495854=document[_0xcabb2(0xe7)](_0xcabb2(0x104)),_0x5ebb11=document[_0xcabb2(0xe7)]('input'),_0x5212b6=document[_0xcabb2(0xe7)](_0xcabb2(0x104)),_0x1d72ed=document['createElement'](_0xcabb2(0xda));_0x1d72ed[_0xcabb2(0x9e)][_0xcabb2(0x99)]=_0xcabb2(0x96),_0x1d72ed['style'][_0xcabb2(0xe1)]=_0xcabb2(0xf8),_0x1d72ed[_0xcabb2(0x9e)][_0xcabb2(0xf7)]=_0xcabb2(0x9d),_0x1d72ed['style'][_0xcabb2(0xa5)]=_0xcabb2(0x83),_0x1d72ed[_0xcabb2(0x9e)][_0xcabb2(0xee)]=_0xcabb2(0xdc),_0x495854[_0xcabb2(0xb6)]=_0xcabb2(0x9f),_0x495854[_0xcabb2(0xbd)]='0',_0x495854[_0xcabb2(0xb1)]='23',_0x495854['placeholder']='HH',_0x495854[_0xcabb2(0x9e)][_0xcabb2(0xf6)]=_0xcabb2(0x8e),_0x495854[_0xcabb2(0x9e)]['textAlign']=_0xcabb2(0x83),_0x495854[_0xcabb2(0x9e)][_0xcabb2(0xee)]='0',_0x5ebb11[_0xcabb2(0xb6)]='number',_0x5ebb11[_0xcabb2(0xbd)]='0',_0x5ebb11[_0xcabb2(0xb1)]='59',_0x5ebb11['placeholder']='MM',_0x5ebb11[_0xcabb2(0x9e)][_0xcabb2(0xf6)]=_0xcabb2(0x8e),_0x5ebb11[_0xcabb2(0x9e)][_0xcabb2(0x80)]=_0xcabb2(0x83),_0x5ebb11[_0xcabb2(0x9e)]['marginBottom']='0',_0x5212b6[_0xcabb2(0xb6)]=_0xcabb2(0x9f),_0x5212b6[_0xcabb2(0xbd)]='0',_0x5212b6[_0xcabb2(0xb1)]='59',_0x5212b6[_0xcabb2(0xc5)]='SS',_0x5212b6[_0xcabb2(0x9e)][_0xcabb2(0xf6)]=_0xcabb2(0x8e),_0x5212b6[_0xcabb2(0x9e)][_0xcabb2(0x80)]=_0xcabb2(0x83),_0x5212b6['style'][_0xcabb2(0xee)]='0',_0x1d72ed[_0xcabb2(0x8c)](_0x495854),_0x1d72ed[_0xcabb2(0x8c)](_0x5ebb11),_0x1d72ed[_0xcabb2(0x8c)](_0x5212b6);const _0x15b8ed=document[_0xcabb2(0xe7)](_0xcabb2(0xcd));_0x15b8ed[_0xcabb2(0x103)]=_0xcabb2(0xf5),_0x15b8ed[_0xcabb2(0x9e)][_0xcabb2(0xee)]='5px';const _0x434e19=document[_0xcabb2(0xe7)](_0xcabb2(0xda));_0x434e19['style'][_0xcabb2(0x99)]=_0xcabb2(0x96),_0x434e19[_0xcabb2(0x9e)][_0xcabb2(0xe1)]=_0xcabb2(0x101),_0x434e19['style'][_0xcabb2(0xf7)]=_0xcabb2(0x90),_0x434e19[_0xcabb2(0x9e)][_0xcabb2(0xf3)]='10px',_0x40565e[_0xcabb2(0x8c)](_0x2e92bc),_0x40565e[_0xcabb2(0x8c)](_0x1d72ed),_0x40565e[_0xcabb2(0x8c)](_0x15b8ed),_0x40565e['appendChild'](_0x434e19),_0xd10dbb[_0xcabb2(0x8c)](_0x4271a7),_0xd10dbb[_0xcabb2(0x8c)](_0x40565e),_0xee8825[_0xcabb2(0xb8)](_0xd10dbb);const _0x33116f=document[_0xcabb2(0xe7)](_0xcabb2(0xcd));_0x33116f[_0xcabb2(0x102)]=_0xcabb2(0xd8),_0x33116f[_0xcabb2(0xf0)]='Show/Hide\x20Athena\x20Protection\x20Scheduler',_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0x89)]='10000',_0x33116f['style']['fontSize']=_0xcabb2(0x82),_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0xde)]=_0xcabb2(0xad),_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0xcb)]=_0xcabb2(0xc4),_0x33116f['style'][_0xcabb2(0xb9)]=_0xcabb2(0x90),_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0xce)]='pointer',_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0xae)]='4px',_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0x94)]=_0xcabb2(0x8a),_0x33116f[_0xcabb2(0x9e)][_0xcabb2(0xff)]='8px',_0x33116f[_0xcabb2(0x9e)]['bottom']=_0xcabb2(0x87);const _0x5162d8=document['querySelector'](_0xcabb2(0xdd));_0x5162d8&&(getComputedStyle(_0x5162d8)['position']===_0xcabb2(0xc9)&&(_0x5162d8['style'][_0xcabb2(0x94)]=_0xcabb2(0xe5)),_0x5162d8['appendChild'](_0x33116f));_0xd10dbb[_0xcabb2(0x9e)][_0xcabb2(0x99)]='none',_0x33116f[_0xcabb2(0xd0)](_0xcabb2(0xc1),function(){const _0x2cd934=_0xcabb2;_0xd10dbb[_0x2cd934(0x9e)]['display']=_0xd10dbb[_0x2cd934(0x9e)][_0x2cd934(0x99)]==='none'?'':_0x2cd934(0xa1);});let _0x97e23a=_0x4271a7,_0x58f7a5=_0xd10dbb,_0x471cf9=0x0,_0x19ae4b=0x0,_0x27acab=![];_0x97e23a[_0xcabb2(0xd0)](_0xcabb2(0xe4),function(_0x14e93a){const _0x4bb0e8=_0xcabb2;_0x27acab=!![],_0x471cf9=_0x58f7a5[_0x4bb0e8(0xe9)]-_0x14e93a[_0x4bb0e8(0x95)],_0x19ae4b=_0x58f7a5[_0x4bb0e8(0xc2)]-_0x14e93a['clientY'],_0x14e93a[_0x4bb0e8(0xa6)]();},!![]),document['addEventListener']('mouseup',function(){_0x27acab=![];},!![]),_0x97e23a[_0xcabb2(0xd0)](_0xcabb2(0xbe),function(_0x37ada8){const _0x153d5b=_0xcabb2;_0x27acab&&(_0x58f7a5[_0x153d5b(0x9e)][_0x153d5b(0xb0)]=_0x37ada8[_0x153d5b(0x95)]+_0x471cf9+'px',_0x58f7a5['style'][_0x153d5b(0x9b)]=_0x37ada8[_0x153d5b(0xc0)]+_0x19ae4b+'px');},!![]);let _0x5d48f9=[];_0x15b8ed[_0xcabb2(0xd0)](_0xcabb2(0xc1),function(){const _0x2a3997=_0xcabb2,_0x494eb2=parseInt(_0x2e92bc[_0x2a3997(0xf9)],0xa),_0x18324c=parseInt(_0x495854['value'],0xa),_0x4adaa8=parseInt(_0x5ebb11['value'],0xa),_0x3113ed=parseInt(_0x5212b6['value'],0xa);if(!_0x494eb2||isNaN(_0x18324c)||_0x18324c<0x0||_0x18324c>0x17||isNaN(_0x4adaa8)||_0x4adaa8<0x0||_0x4adaa8>0x3b||isNaN(_0x3113ed)||_0x3113ed<0x0||_0x3113ed>0x3b){alert('Please\x20enter\x20a\x20valid\x20city\x20ID,\x20hour\x20(0-23),\x20minute\x20(0-59),\x20and\x20second\x20(0-59).');return;}_0x415351(_0x494eb2,_0x18324c,_0x4adaa8,_0x3113ed);});function _0x415351(_0x50e1f8,_0x3fbb13,_0x3def41,_0x1131a0){const _0xdf6f51=_0xcabb2,_0x49124e=document['createElement']('div');_0x49124e['style'][_0xdf6f51(0x99)]=_0xdf6f51(0x96),_0x49124e[_0xdf6f51(0x9e)][_0xdf6f51(0xe1)]=_0xdf6f51(0xf8),_0x49124e['style'][_0xdf6f51(0xa8)]=_0xdf6f51(0x83),_0x49124e[_0xdf6f51(0x9e)][_0xdf6f51(0xf7)]=_0xdf6f51(0x87),_0x49124e[_0xdf6f51(0x9e)]['background']=_0xdf6f51(0x81),_0x49124e[_0xdf6f51(0x9e)][_0xdf6f51(0xcb)]=_0xdf6f51(0xc6),_0x49124e[_0xdf6f51(0x9e)][_0xdf6f51(0xf4)]=_0xdf6f51(0xd3),_0x49124e[_0xdf6f51(0x9e)]['fontSize']=_0xdf6f51(0x107);const _0x90d25f=document['createElement']('span');_0x90d25f[_0xdf6f51(0x103)]=_0xdf6f51(0xdf)+_0x50e1f8+'\x20@\x20'+_0x3fbb13[_0xdf6f51(0xba)]()['padStart'](0x2,'0')+':'+_0x3def41[_0xdf6f51(0xba)]()['padStart'](0x2,'0')+':'+_0x1131a0[_0xdf6f51(0xba)]()[_0xdf6f51(0xd5)](0x2,'0');const _0x4a83cc=document['createElement'](_0xdf6f51(0xa3));_0x4a83cc[_0xdf6f51(0x103)]=_0xdf6f51(0xeb),_0x4a83cc[_0xdf6f51(0x9e)]['marginLeft']='6px',_0x4a83cc[_0xdf6f51(0x9e)][_0xdf6f51(0x8d)]='#333';const _0x5c4425=document[_0xdf6f51(0xe7)](_0xdf6f51(0xcd));_0x5c4425[_0xdf6f51(0x103)]='Cancel',_0x5c4425[_0xdf6f51(0x9e)][_0xdf6f51(0xdb)]='#e57373',_0x5c4425[_0xdf6f51(0x9e)][_0xdf6f51(0x8d)]=_0xdf6f51(0xca),_0x5c4425['style'][_0xdf6f51(0xcb)]=_0xdf6f51(0xa1),_0x5c4425[_0xdf6f51(0x9e)][_0xdf6f51(0xce)]=_0xdf6f51(0x100),_0x5c4425['style'][_0xdf6f51(0xf4)]='2px\x208px',_0x5c4425[_0xdf6f51(0x9e)]['fontSize']=_0xdf6f51(0x84),_0x5c4425['style'][_0xdf6f51(0xfa)]=_0xdf6f51(0x90),_0x49124e['appendChild'](_0x90d25f),_0x49124e[_0xdf6f51(0x8c)](_0x4a83cc),_0x49124e[_0xdf6f51(0x8c)](_0x5c4425),_0x434e19[_0xdf6f51(0x8c)](_0x49124e);let _0x29d966=setInterval(async function(){const _0x4876a9=_0xdf6f51,_0x2888b7=new Date();_0x2888b7[_0x4876a9(0x108)]()===_0x3fbb13&&_0x2888b7[_0x4876a9(0xf2)]()===_0x3def41&&_0x2888b7['getSeconds']()>=_0x1131a0-0x3&&_0x2888b7[_0x4876a9(0x106)]()<=_0x1131a0+0x2&&(_0x4a83cc[_0x4876a9(0x103)]=_0x4876a9(0x98)+_0x2888b7[_0x4876a9(0x106)]()+_0x4876a9(0x93),await _0x555839(_0x50e1f8,_0x4a83cc)),_0x2888b7['getHours']()===_0x3fbb13&&_0x2888b7[_0x4876a9(0xf2)]()===_0x3def41&&_0x2888b7[_0x4876a9(0x106)]()>_0x1131a0+0x2&&(_0x4a83cc[_0x4876a9(0x103)]='Done!',clearInterval(_0x29d966));},0xc8);_0x5c4425[_0xdf6f51(0xd0)]('click',function(){const _0x211c2c=_0xdf6f51;clearInterval(_0x29d966),_0x4a83cc['innerText']='Cancelled',_0x5c4425[_0x211c2c(0xd7)]=!![],_0x49124e['style'][_0x211c2c(0x8f)]=_0x211c2c(0xcc),_0x49124e['remove']();}),_0x5d48f9[_0xdf6f51(0x8b)]({'intervalId':_0x29d966,'row':_0x49124e});}async function _0x555839(_0xfe76f,_0x51ae91){const _0x101816=_0xcabb2;try{const _0x2b7ae2=uw['MM'][_0x101816(0xaa)]()[_0x101816(0xea)][0x0]['models'];let _0x774cc4=null;for(let _0xabef4a of _0x2b7ae2){if(_0xabef4a[_0x101816(0x9c)][_0x101816(0xe8)]==='athena'){_0x774cc4=_0xabef4a;break;}}if(!_0x774cc4){_0x51ae91['innerText']=_0x101816(0xb4);return;}let _0x269f1e=ITowns[_0x101816(0xd4)][_0x101816(0x9c)][_0x101816(0x105)];if(_0x269f1e<0x82){_0x51ae91[_0x101816(0x103)]=_0x101816(0xb5);return;}let _0x94f01b={'model_url':_0x101816(0xe0),'action_name':_0x101816(0xb2),'arguments':{'power_id':'town_protection','target_id':_0xfe76f,'town_id':_0x774cc4[_0x101816(0x9c)]['id'],'csrfToken':Game[_0x101816(0xc3)]}};gpAjax['ajaxPost'](_0x101816(0xec),_0x101816(0xcf),_0x94f01b,!![]),_0x51ae91[_0x101816(0x103)]=_0x101816(0xb7);}catch(_0x2513cf){_0x51ae91[_0x101816(0x103)]=_0x101816(0xd2)+_0x2513cf[_0x101816(0x86)];}}})());function a0_0x2e08(_0x91bd61,_0x514175){const _0xea08eb=a0_0xea08();return a0_0x2e08=function(_0x2e08ee,_0xff03e1){_0x2e08ee=_0x2e08ee-0x80;let _0x44bcc2=_0xea08eb[_0x2e08ee];return _0x44bcc2;},a0_0x2e08(_0x91bd61,_0x514175);}function a0_0xea08(){const _0x5710a6=['min','mousemove','64690oYtRmO','clientY','click','offsetTop','csrfToken','1px\x20solid\x20#bfa100','placeholder','1px\x20solid\x20#ccc','Target\x20City\x20ID','3348665KtUeuR','static','#fff','border','0.6','button','cursor','execute','addEventListener',')();','Error:\x20','3px\x205px','player_gods','padStart','17242ojPiih','disabled','<img\x20src=\x22https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/main/protection.png\x22\x20alt=\x22Protection\x22\x20style=\x22width:20px;height:20px;vertical-align:middle;\x22>','startDiv','div','backgroundColor','5px','.nui_main_menu\x20.bottom','background','City:\x20','CastedPowers','flexDirection','antiquewhite','script','mousedown','relative','443128JufMzy','createElement','god','offsetLeft','Town','Scheduled','frontend_bridge','576CubfRV','marginBottom','10px','title','minWidth','getMinutes','marginTop','padding','ADD\x20SCHEDULE','width','gap','row','value','marginLeft','260px','9999','321eYnUQa','4ukKLkV','right','pointer','column','innerHTML','innerText','input','athena_favor','getSeconds','13px','getHours','textAlign','#f5f5dc','18px','center','12px','3528126wFQNYv','message','8px','documentElement','zIndex','absolute','push','appendChild','color','34px','opacity','6px','90px','Athena\x20Protection\x20Scheduler','s...','position','clientX','flex','1px\x201px\x202px\x20#fff8dc','Spamming\x20at\x20','display','7731276sUhoGJ','top','attributes','3px','style','number','11ZQeNti','none','textContent','span','#333','justifyContent','preventDefault','move','alignItems','560px','getCollections','20px','6CmbVRE','gold','margin','409859pUaSBq','left','max','cast','className','No\x20Athena\x20city!','Not\x20enough\x20favor!','type','Protection\x20cast!','append','borderRadius','toString','#f8de7e','textShadow'];a0_0xea08=function(){return _0x5710a6;};return a0_0xea08();}
+  const startDiv = document.createElement("div");
+  startDiv.className = "startDiv";
+  startDiv.style.top = "560px";
+  startDiv.style.left = "20px";
+  startDiv.style.position = "absolute";
+  startDiv.style.zIndex = "9999";
+  startDiv.style.backgroundColor = "white";
+  startDiv.style.border = "1px solid black";
+  startDiv.style.textAlign = "center";
+  startDiv.style.padding = "0";
+  startDiv.style.minWidth = "260px";
+
+  const titleDiv = document.createElement("div");
+  titleDiv.className = "titleDiv";
+  titleDiv.style.padding = "10px";
+  titleDiv.style.cursor = "move";
+  titleDiv.style.zIndex = "10";
+  titleDiv.style.backgroundColor = "#f8de7e";
+  titleDiv.style.color = "#333";
+  titleDiv.style.fontWeight = "bold";
+  titleDiv.style.textShadow = "1px 1px 2px #fff8dc";
+  titleDiv.innerText = "Athena Protection Scheduler";
+
+  const containerDiv = document.createElement("div");
+  containerDiv.style.backgroundColor = "antiquewhite";
+  containerDiv.style.display = "flex";
+  containerDiv.style.flexDirection = "column";
+  containerDiv.style.padding = "10px";
+
+  // City ID input
+  const townInput = document.createElement("input");
+  townInput.type = "number";
+  townInput.min = "0";
+  townInput.placeholder = "Target City ID";
+  townInput.style.marginBottom = "5px";
+  townInput.style.width = "90px";
+
+  // --- Time Inputs Row ---
+  const spellHourInput = document.createElement("input");
+  const spellMinuteInput = document.createElement("input");
+  const spellSecondInput = document.createElement("input");
+  const timeRow = document.createElement("div");
+  timeRow.style.display = "flex";
+  timeRow.style.flexDirection = "row";
+  timeRow.style.gap = "3px";
+  timeRow.style.justifyContent = "center";
+  timeRow.style.marginBottom = "5px";
+
+  // Hour input
+  spellHourInput.type = "number";
+  spellHourInput.min = "0";
+  spellHourInput.max = "23";
+  spellHourInput.placeholder = "HH";
+  spellHourInput.style.width = "34px";
+  spellHourInput.style.textAlign = "center";
+  spellHourInput.style.marginBottom = "0";
+
+  // Minute input
+  spellMinuteInput.type = "number";
+  spellMinuteInput.min = "0";
+  spellMinuteInput.max = "59";
+  spellMinuteInput.placeholder = "MM";
+  spellMinuteInput.style.width = "34px";
+  spellMinuteInput.style.textAlign = "center";
+  spellMinuteInput.style.marginBottom = "0";
+
+  // Second input
+  spellSecondInput.type = "number";
+  spellSecondInput.min = "0";
+  spellSecondInput.max = "59";
+  spellSecondInput.placeholder = "SS";
+  spellSecondInput.style.width = "34px";
+  spellSecondInput.style.textAlign = "center";
+  spellSecondInput.style.marginBottom = "0";
+
+  // Add time inputs to row
+  timeRow.appendChild(spellHourInput);
+  timeRow.appendChild(spellMinuteInput);
+  timeRow.appendChild(spellSecondInput);
+
+  // Schedule button
+  const spellButton = document.createElement("button");
+  spellButton.innerText = "ADD SCHEDULE";
+  spellButton.style.marginBottom = "5px";
+
+  // Schedules list
+  const schedulesDiv = document.createElement("div");
+  schedulesDiv.style.display = "flex";
+  schedulesDiv.style.flexDirection = "column";
+  schedulesDiv.style.gap = "6px";
+  schedulesDiv.style.marginTop = "10px";
+
+  // Add elements to container
+  containerDiv.appendChild(townInput);
+  containerDiv.appendChild(timeRow);
+  containerDiv.appendChild(spellButton);
+  containerDiv.appendChild(schedulesDiv);
+
+  startDiv.appendChild(titleDiv);
+  startDiv.appendChild(containerDiv);
+  bod2.append(startDiv);
+
+  // --- Add toggle button to .nui_main_menu .bottom ---
+  const toggleBtn = document.createElement("button");
+  toggleBtn.innerHTML =
+    '<img src="https://raw.githubusercontent.com/georgeadono/grepolis_autoCityProtection/main/protection.png" alt="Protection" style="width:20px;height:20px;vertical-align:middle;">';
+  toggleBtn.title = "Show/Hide Athena Protection Scheduler";
+  toggleBtn.style.zIndex = "10000";
+  toggleBtn.style.fontSize = "18px";
+  toggleBtn.style.background = "gold";
+  toggleBtn.style.border = "1px solid #bfa100";
+  toggleBtn.style.borderRadius = "6px";
+  toggleBtn.style.cursor = "pointer";
+  toggleBtn.style.margin = "4px";
+  toggleBtn.style.position = "absolute";
+  toggleBtn.style.right = "8px";
+  toggleBtn.style.bottom = "8px";
+
+  // Place the button in the .nui_main_menu .bottom div
+  const mainMenuBottom = document.querySelector(".nui_main_menu .bottom");
+  if (mainMenuBottom) {
+    // Only set position: relative if not already set, to avoid layout issues
+    if (getComputedStyle(mainMenuBottom).position === "static") {
+      mainMenuBottom.style.position = "relative";
+    }
+    mainMenuBottom.appendChild(toggleBtn);
+  }
+
+  // Hide the scheduler window by default
+  startDiv.style.display = "none";
+
+  // Toggle window on button click
+  toggleBtn.addEventListener("click", function () {
+    startDiv.style.display = startDiv.style.display === "none" ? "" : "none";
+  });
+
+  // --- Window Movement ---
+  let elem = titleDiv,
+    par = startDiv,
+    x = 0,
+    y = 0,
+    mousedown = false;
+
+  elem.addEventListener(
+    "mousedown",
+    function (e) {
+      mousedown = true;
+      x = par.offsetLeft - e.clientX;
+      y = par.offsetTop - e.clientY;
+      e.preventDefault();
+    },
+    true
+  );
+
+  document.addEventListener(
+    "mouseup",
+    function () {
+      mousedown = false;
+    },
+    true
+  );
+
+  elem.addEventListener(
+    "mousemove",
+    function (e) {
+      if (mousedown) {
+        par.style.left = e.clientX + x + "px";
+        par.style.top = e.clientY + y + "px";
+      }
+    },
+    true
+  );
+
+  // --- Multiple Schedules Logic ---
+  let scheduleList = [];
+
+  spellButton.addEventListener("click", function () {
+    const targetTownId = parseInt(townInput.value, 10);
+    const hour = parseInt(spellHourInput.value, 10);
+    const minute = parseInt(spellMinuteInput.value, 10);
+    const second = parseInt(spellSecondInput.value, 10);
+
+    if (
+      !targetTownId ||
+      isNaN(hour) ||
+      hour < 0 ||
+      hour > 23 ||
+      isNaN(minute) ||
+      minute < 0 ||
+      minute > 59 ||
+      isNaN(second) ||
+      second < 0 ||
+      second > 59
+    ) {
+      alert(
+        "Please enter a valid city ID, hour (0-23), minute (0-59), and second (0-59)."
+      );
+      return;
+    }
+
+    addSchedule(targetTownId, hour, minute, second);
+  });
+
+  function addSchedule(targetTownId, hour, minute, second) {
+    // UI row for this schedule
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    row.style.flexDirection = "row";
+    row.style.alignItems = "center";
+    row.style.gap = "8px";
+    row.style.background = "#f5f5dc";
+    row.style.border = "1px solid #ccc";
+    row.style.padding = "3px 5px";
+    row.style.fontSize = "13px";
+
+    const info = document.createElement("span");
+    info.innerText = `City: ${targetTownId} @ ${hour
+      .toString()
+      .padStart(2, "0")}:${minute.toString().padStart(2, "0")}:${second
+      .toString()
+      .padStart(2, "0")}`;
+
+    const status = document.createElement("span");
+    status.innerText = "Scheduled";
+    status.style.marginLeft = "6px";
+    status.style.color = "#333";
+
+    const cancelBtn = document.createElement("button");
+    cancelBtn.innerText = "Cancel";
+    cancelBtn.style.backgroundColor = "#e57373";
+    cancelBtn.style.color = "#fff";
+    cancelBtn.style.border = "none";
+    cancelBtn.style.cursor = "pointer";
+    cancelBtn.style.padding = "2px 8px";
+    cancelBtn.style.fontSize = "12px";
+    cancelBtn.style.marginLeft = "6px";
+
+    row.appendChild(info);
+    row.appendChild(status);
+    row.appendChild(cancelBtn);
+    schedulesDiv.appendChild(row);
+
+    // Schedule logic
+    let intervalId = setInterval(async function () {
+      const now = new Date();
+      if (
+        now.getHours() === hour &&
+        now.getMinutes() === minute &&
+        now.getSeconds() >= second - 3 &&
+        now.getSeconds() <= second + 2
+      ) {
+        status.innerText = `Spamming at ${now.getSeconds()}s...`;
+        await castProtection(targetTownId, status);
+      }
+      if (
+        now.getHours() === hour &&
+        now.getMinutes() === minute &&
+        now.getSeconds() > second + 2
+      ) {
+        status.innerText = "Done!";
+        clearInterval(intervalId);
+      }
+    }, 200);
+
+    cancelBtn.addEventListener("click", function () {
+      clearInterval(intervalId);
+      status.innerText = "Cancelled";
+      cancelBtn.disabled = true;
+      row.style.opacity = "0.6";
+      row.remove();
+    });
+
+    // Keep reference if you want to manage schedules later
+    scheduleList.push({ intervalId, row });
+  }
+
+  async function castProtection(targetTownId, statusElem) {
+    try {
+      // Find a city with Athena
+      const myTowns = uw.MM.getCollections().Town[0].models;
+      let athenaTown = null;
+      for (let t of myTowns) {
+        if (t.attributes.god === "athena") {
+          athenaTown = t;
+          break;
+        }
+      }
+      if (!athenaTown) {
+        statusElem.innerText = "No Athena city!";
+        return;
+      }
+
+      // Check favor (optional)
+      let favor = ITowns.player_gods.attributes.athena_favor;
+      if (favor < 130) {
+        statusElem.innerText = "Not enough favor!";
+        return;
+      }
+
+      let data = {
+        model_url: "CastedPowers",
+        action_name: "cast",
+        arguments: {
+          power_id: "town_protection",
+          target_id: targetTownId,
+          town_id: athenaTown.attributes.id,
+          csrfToken: Game.csrfToken,
+        },
+      };
+
+      gpAjax.ajaxPost("frontend_bridge", "execute", data, true);
+      statusElem.innerText = "Protection cast!";
+    } catch (e) {
+      statusElem.innerText = "Error: " + e.message;
+    }
+  }
+})();
